@@ -4,7 +4,7 @@ body {
 }
 
 .col1 {
-    background-image: url(src/assets/fondologin.svg);
+    background-image: url(src/assets/img_login.svg);
     background-size: cover; 
     background-position: center;
     height: 100vh; 
@@ -59,12 +59,12 @@ button{
     width: 100%;
     border-radius: 40px;
     border: none;
-    background-color: #346C73;
+    background-color: #59032F;
     font-family: "DM Sans", sans-serif;
     font-weight: bold;
     color: #E3E3E3;
     font-size: 20px;
 }
 button:hover{
-    background-color: #33A69A;    
+    background-color: #bb0a65;    
 }
