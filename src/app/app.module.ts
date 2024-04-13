@@ -8,7 +8,13 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 
+const keycloakConfig = {
+  url: 'URL_DEL_SERVIDOR_KEYCLOAK/auth',
+  realm: 'NOMBRE_DEL_REALM',
+  clientId: 'ID_DEL_CLIENTE_ANGULAR',
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +26,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    KeycloakAngularModule
   ],
-  providers: [],
+  providers: [KeycloakService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
