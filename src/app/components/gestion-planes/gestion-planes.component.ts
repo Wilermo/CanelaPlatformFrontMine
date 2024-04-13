@@ -17,9 +17,14 @@ export class GestionPlanesComponent implements OnInit {
   planes: PlanesDto[] | undefined;
 
   ngOnInit(): void {
-    this.infoPlanesService
-      .findAll()
-      .subscribe((planes) => (this.planes = planes));
+    this.infoPlanesService.getPlanes().subscribe(
+      (data) => {
+        this.planes = data; 
+      },
+      (error) => {
+        console.error('Ocurrió un error al obtener los planes:', error);
+      }
+    );
   }
 
   login() {

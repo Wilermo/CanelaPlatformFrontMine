@@ -77,11 +77,11 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let plan of planes">
-                                        <td>{{plan.name}}</td>
-                                        <td>Perfecto para empresas en fase de exploración. Accede a nuestra plataforma durante 3 meses para implementar y evaluar si TalentSoft se ajusta a tus necesidades.</td>
-                                        <td>3 Meses</td>
-                                        <td>1 Administrador,3 Usuarios</td>
-                                        <td>5 disponibles</td>
+                                        <td>{{ plan.name}}</td>
+                                        <td>{{ plan.description}}</td>
+                                        <td>{{ plan.duration}}</td>
+                                        <td>{{ plan.numberEmployees}}</td>
+                                        <td>{{ plan.bonuses}}</td>
                                     </tr>                                    
                                 </tbody>
                             </table>
