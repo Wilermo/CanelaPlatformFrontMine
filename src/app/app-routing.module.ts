@@ -5,6 +5,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { PermisosUsuarioComponent } from './components/permisos-usuario/permisos-usuario.component';
 import { GestionPlanesComponent } from './components/gestion-planes/gestion-planes.component';
+import { UsuarioPermisoDto } from './model/usuario-permiso-dto';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -12,6 +14,7 @@ const routes: Routes = [
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'canela/permisos', component: PermisosUsuarioComponent },
   { path: 'canela/planes', component: GestionPlanesComponent },
+  { path: 'canela/usuarios', component: UsuariosComponent },
   { path: '**', redirectTo: '' },
 ];
 

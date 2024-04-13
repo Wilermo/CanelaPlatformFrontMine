@@ -1,0 +1,141 @@
+.menu-container {
+    background-color: #f8f9fa; /* Color de fondo del menú */
+    border-right: 1px solid #dee2e6; /* Borde derecho */
+    padding-top: 20px; /* Espaciado superior */
+  }
+  
+  .nav-link {
+    padding: 10px; /* Espaciado de los elementos del menú */
+  }
+  
+  /* Estilos para los contenedores adicionales */
+  .col-11 {
+    border: 1px solid #dee2e6; /* Borde para visualización */
+    margin-top: 20px; /* Espaciado superior */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .col-3{
+    background-color: #EDF2F7; /* Color de fondo del menú */
+    border-right: 1px solid #dee2e6; /* Borde derecho */
+    padding-top: 20px; /* Espaciado superior */
+  }
+  
+  .container-fluid{
+    display: flex;
+  
+  }
+  
+  /* Estilos para el interruptor personalizado */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #52223b;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #52223b;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Estilos para el círculo interior del interruptor */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /* Estilos para los íconos de edición y eliminación */
+  .edit-icon,
+  .delete-icon {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    margin-right: 10px; /* Espacio entre los íconos */
+  }
+  
+  .edit-icon:hover,
+  .delete-icon:hover {
+    color: red; /* Cambia el color al pasar el cursor sobre los íconos */
+  }
+
+  /* Estilo para el contenedor */
+.mb-3 {
+    margin-bottom: 1rem; /* Espacio inferior */
+  }
+  
+  /* Estilo para las etiquetas de las etiquetas */
+  .form-label {
+    margin-bottom: 0.5rem; /* Espacio inferior */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-control {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 0.375rem 0.75rem; /* Relleno */
+    font-size: 1rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    color: #495057; /* Color de texto */
+    background-color: #fff; /* Color de fondo */
+    background-clip: padding-box; /* Clip de fondo */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 0.25rem; /* Borde redondeado */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición de borde y sombra */
+  }
+  
+  /* Estilo para los campos de texto */
+  .form-control:focus {
+    border-color: #80bdff; /* Borde al enfocar */
+    outline: 0; /* Eliminar el contorno */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Sombra al enfocar */
+  }
+  
+  /* Estilo para el área de texto */
+  textarea.form-control {
+    resize: vertical; /* Redimensionar verticalmente */
+  }
+  
+  
+  

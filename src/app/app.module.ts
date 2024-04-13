@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PermisosUsuarioComponent } from './components/permisos-usuario/permisos-usuario.component';
 import { GestionPlanesComponent } from './components/gestion-planes/gestion-planes.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { GestionPlanesComponent } from './components/gestion-planes/gestion-plan
     ResetPasswordComponent,
     PermisosUsuarioComponent,
     GestionPlanesComponent,
+    UsuariosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

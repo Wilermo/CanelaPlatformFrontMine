@@ -25,10 +25,13 @@
                     <a class="nav-link" href="#"><i class="fa-regular fa-calendar " style="color: #292c32; margin-right: 1.0em; margin-left: 20px;"></i><span style="color:#292c32">Calendario</span></a>
                 </li>
                 <li class="nav-item ml-5">
+                    <a class="nav-link" href="#"><i class="fa-regular fa-calendar " style="color: #292c32; margin-right: 1.0em; margin-left: 20px;"></i><span style="color:#292c32">Usuarios</span></a>
+                </li>
+                <li class="nav-item ml-5">
                     <a class="nav-link" href="#"><i class="fa-solid fa-person-chalkboard " style="color: #292c32; margin-right: 1.0em; margin-left: 20px;"></i><span style="color:#292c32">Permisos</span></a>
                 </li>
                 <li class="nav-item mb-5 ml-5">
-                    <a class="nav-link" href="#"><i class="fa-regular fa-paper-plane " style="color: #bb0a65; margin-right: 1.0em; margin-left: 20px;"></i><span style ="color:#bb0a65">Planes</span></a>
+                    <a class="nav-link" [routerLink]="['/canela/planes']"><i class="fa-regular fa-paper-plane "  style="color: #bb0a65; margin-right: 1.0em; margin-left: 20px;"></i><span style ="color:#bb0a65">Planes</span></a>
                 </li>
                 <li class="nav-item mb-5 ml-5">
                     <a class="nav-link" href="#"></a>
@@ -43,7 +46,7 @@
           </div>
 
             <div class="col-10 ">
-                <div class="col-3" style="width: 1200px;height: 110px;border: 1px solid #ccc; align-items: center;">
+                <div class="col-3" style="width: 1191.005px;height: 110px;border: 1px solid #ccc; align-items: center;">
                     <div class="container-fluid " style="width: 690px; height: 48px; border: 1px solid #ccc;border-radius: 10px; margin-left: 20px;display: flex; align-items: center;">
                         <i class="fa-solid fa-magnifying-glass" style="margin-right: 10px;"></i>
                         <span style="color: rgb(195, 195, 197);">Ingresa tu búsqueda aquí...</span>
@@ -54,15 +57,15 @@
                 </div>
 
                 <div class="col-9" style="height: 910px;">
-                    <div class="container-fluid " style="width: 1200px; height: 210px; border: 1px solid #ccc; background-color: #52223b; display: flex; justify-content: center; align-items: center;">
+                    <div class="container-fluid " style="width: 1191.005px; height: 210px; border: 1px solid #ccc; background-color: #52223b; display: flex; justify-content: center; align-items: center;">
                         <div class="container-fluid m-3" style="width: 1000px; height: 145px; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
                             <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Gestión planes</h1>
                         </div>
                     </div>
       
-                    <div class="container-fluid " style="width: 1200px; height: 445px; border: 1px solid #ccc; background-color: #EDF2F7;">
+                    <div class="container-fluid " style="width: 1191.005px; height: 445px; border: 1px solid #ccc; background-color: #EDF2F7;">
                         <div class="container-fluid m-3">
-                            <table class="table ">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nombre plan</th>
@@ -73,30 +76,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>trial</td>
+                                    <tr *ngFor="let plan of planes">
+                                        <td>{{plan.name}}</td>
                                         <td>Perfecto para empresas en fase de exploración. Accede a nuestra plataforma durante 3 meses para implementar y evaluar si TalentSoft se ajusta a tus necesidades.</td>
                                         <td>3 Meses</td>
                                         <td>1 Administrador,3 Usuarios</td>
                                         <td>5 disponibles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semestral</td>
-                                        <td>Ideal para compromisos a medio plazo. Accede a todas las funciones de TalentSoft durante 6 meses para una gestión eficiente de tu talento humano y procesos de recursos humanos.</td>
-                                        <td>6 Meses</td>
-                                        <td>1 Administrador,5 Usuarios</td>
-                                        <td>7 disponibles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anual</td>
-                                        <td>Nuestro plan estrella para empresas comprometidas a largo plazo con el éxito. Obtén acceso completo a todas las características de TalentSoft durante un año, con un descuento por pago anticipado</td>
-                                        <td>1 año</td>
-                                        <td>1 Administrador,6 Usuarios</td>
-                                        <td>3 disponibles</td>
-                                    </tr>
-                                    
+                                    </tr>                                    
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Button</button>
                         </div>
                     </div>
                 </div>
