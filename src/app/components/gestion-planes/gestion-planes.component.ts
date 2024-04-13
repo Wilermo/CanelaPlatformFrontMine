@@ -19,6 +19,7 @@ export class GestionPlanesComponent implements OnInit {
   ngOnInit(): void {
     this.infoPlanesService.getPlanes().subscribe(
       (data) => {
+        console.log(data);
         this.planes = data; 
       },
       (error) => {

@@ -1,9 +1,9 @@
 export class PlanesDto {
   constructor(
-    public name: string,
+    public namePlan: string,
     public description: string,
     public duration: string,
-    public numberEmployees: number,
+    public maxNumWorker: number,
     public bonuses: number
   ) {}
 }
