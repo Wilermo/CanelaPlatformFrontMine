@@ -80,21 +80,21 @@
                                         <td>{{user.FirstName}} {{user.LastName}}</td>
                                         <td>
                                             <!-- Interruptor personalizado -->
-                                            <label class="switch" (click)="enableChats(user.id)">
+                                            <label class="switch" (click)="enableMarketing(user.id)">
                                                 <input type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>
                                         </td>
                                         <td>
                                             <!-- Interruptor personalizado -->
-                                            <label class="switch">
+                                            <label class="switch" (click)="enableFinanzas(user.id)">
                                                 <input type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>
-                                        </td>
+                                        </td>""
                                         <td>
                                             <!-- Interruptor personalizado -->
-                                            <label class="switch">
+                                            <label class="switch" (click)="enableServer(user.id)">
                                                 <input type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>

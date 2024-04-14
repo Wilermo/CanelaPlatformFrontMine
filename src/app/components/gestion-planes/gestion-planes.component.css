@@ -23,7 +23,33 @@
   
   .container-fluid{
     display: flex;
-  
+
+  }
+
+  .custom-container {
+    /* Aquí puedes agregar los estilos específicos para el div custom-container */
+    /* Por ejemplo: */
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .gestion-datos{
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
+    align-items: center;
+  }
+
+  .tabla-gestion{
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
+    align-items: center;
+  }
+
+  .btn-plan{
+    background-color: #963e6c;
+    color: #ffffff; 
   }
   
   /* Estilos para el interruptor personalizado */

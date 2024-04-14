@@ -22,9 +22,9 @@ export class PermisosUsuarioComponent implements OnInit {
       .subscribe((users) => (this.usuarios = users));
   }
 
-  enableChats(id: number) {}
-  enableServers(id: number) {}
-  enableBusiness(id: number) {}
+  enableMarketing(id: number) {}
+  enableFinanzas(id: number) {}
+  enableServer(id: number) {}
 
   login() {
     this.router.navigate(['/']);

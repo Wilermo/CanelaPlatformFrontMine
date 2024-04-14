@@ -102,7 +102,9 @@
 
   /* Estilo para el contenedor */
 .mb-3 {
-    margin-bottom: 1rem; /* Espacio inferior */
+    margin-bottom: 1rem;
+    margin-right: 1rem; /* Espacio inferior */
+    flex-direction: column;
   }
   
   /* Estilo para las etiquetas de las etiquetas */
@@ -137,5 +139,33 @@
     resize: vertical; /* Redimensionar verticalmente */
   }
   
+
+  .usuario{
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
+    align-items: center;
+  }
+
+  .tabla-creacion{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
   
+  .container-informacion{
+    display: flex;
+    margin-top: 50px; /* Ajusta el valor según sea necesario */
+    margin-bottom: 50px; 
+  }
+
+  h2{
+    margin-top: 20px; /* Ajusta el valor según sea necesario */
+    margin-bottom: 10px; 
+    color:#52223b
+  }
+
+  .btn-plan{
+    background-color: #963e6c;
+    color: #ffffff; 
+  }
   
