@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    authURL: "/api/talentsoft/auth/login",
+    authURL: "https://canelaauth-production.up.railway.app/api/talentsoft/auth",
     secretKey: 'ThisIsASecretKey'
   };
   

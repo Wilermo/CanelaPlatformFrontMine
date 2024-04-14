@@ -15,7 +15,7 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private utilService: UtilService
-  ) {}
+  ) { }
 
   username: string = '';
   password: string = '';
@@ -43,52 +43,23 @@ export class LoginComponent {
       return true;
     }
   }
-  hasQueryParams() {}
+  hasQueryParams() { }
   iniciarSesion(): void {
+    console.log("Iniciando sesión...");
     if (this.areCorrectFields()) {
+      console.log("Entra1...");
       this.authService.login(this.username, this.password).subscribe(
         (data: any) => {
+          console.log("Respuesta del servidor:", data); // Agregar esta línea para imprimir la respuesta del servidor
           const rol = localStorage.getItem('role');
-          if (rol === 'ADMIN_CANELA') {
-            
-            if (this.returnUrl !== '/' && this.returnUrl !== undefined) {
-              if (this.returnUrl.includes('?')) {
-                //Url with query params
-                const id = this.returnUrl.split('?')[1].split('=')[1];
-                const urlQuery = this.returnUrl.split('?')[0];
-                let queryParams = { id: id.toString() };
-                console.log(queryParams);
-                this.router.navigate([urlQuery], {
-                  queryParams: queryParams,
-                });
-              } else {
-                //Url without query params
-                this.router.navigate([this.returnUrl]);
-              }
-            } else {
-              this.router.navigate(['/main']);
-            }
+          if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
+            this.router.navigate(['/reset-password']);
           } else if (rol === 'ADMIN') {
-            if (this.returnUrl !== '/' && this.returnUrl !== undefined) {
-              if (this.returnUrl.includes('?')) {
-                //Url with query params
-                const id = this.returnUrl.split('?')[1].split('=')[1];
-                const urlQuery = this.returnUrl.split('?')[0];
-                let queryParams = { id: id.toString() };
-                console.log(queryParams);
-                this.router.navigate([urlQuery], {
-                  queryParams: queryParams,
-                });
-              } else {
-                //Url without query params
-                this.router.navigate([this.returnUrl]);
-              }
-            } else {
-              this.router.navigate(['/main-lawyer']);
-            }
+            this.router.navigate(['/reset-password']);
           }
         },
         (error: any) => {
+          console.error("Error en la suscripción:", error);
           let code: number | undefined = error.status
             ? Math.round(error.status / 100) * 100
             : undefined;
@@ -107,4 +78,5 @@ export class LoginComponent {
       );
     }
   }
+
 }

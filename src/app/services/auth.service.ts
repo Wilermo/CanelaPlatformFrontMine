@@ -26,7 +26,7 @@ export class AuthService {
       .pipe(
         tap((response: TokenResponse) => {
           localStorage.setItem('token', response.access_token);
-          localStorage.setItem('role', response.roles.join(',')); // Join roles into a single string
+          localStorage.setItem('role', response.role); // Join roles into a single string
           localStorage.setItem('username', username);
         })
       );
@@ -36,7 +36,7 @@ export class AuthService {
       `${environment.authURL}/${username}/forgot-password`,
       null
     );
-  }
+}
   createUser(
     email: string,
     firstName: string,
