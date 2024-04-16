@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.css']
+  styleUrls: ['./reset-password.component.css'],
 })
 export class ResetPasswordComponent {
   contrasena: string = '';
@@ -15,13 +14,17 @@ export class ResetPasswordComponent {
   onSubmit(): void {
     if (this.contrasena && this.contrasena_c) {
       // Send Credentials
-      this.http.post<any>('URL_DEL_BACKEND/login', { usuario: this.contrasena, contrasena_c: this.contrasena_c })
+      this.http
+        .post<any>('URL_DEL_BACKEND/login', {
+          usuario: this.contrasena,
+          contrasena_c: this.contrasena_c,
+        })
         .subscribe(
-          response => {
+          (response) => {
             // Manage the answer
             console.log('Respuesta del backend:', response);
           },
-          error => {
+          (error) => {
             //Error
             console.error('Error al enviar las credenciales:', error);
           }

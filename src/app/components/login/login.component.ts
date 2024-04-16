@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../app/services/auth.service';
 import { UtilService } from '../../../app/services/util.services';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   constructor(
@@ -79,4 +81,7 @@ export class LoginComponent {
     }
   }
 
+  login() {
+    this.router.navigate(['/canela/permisos']);
+  }
 }
