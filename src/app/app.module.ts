@@ -27,3 +27,4 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
