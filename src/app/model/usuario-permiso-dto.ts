@@ -1,7 +1,7 @@
 export class UsuarioPermisoDto {
   constructor(
-    public FirstName: string,
-    public LastName: string,
+    public firstname: string,
+    public surname: string,
     public id: number
   ) {}
 }

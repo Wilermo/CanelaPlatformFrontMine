@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../app/services/auth.service';
 import { UtilService } from '../../../app/services/util.services';
-
 
 @Component({
   selector: 'app-login',
@@ -17,7 +15,7 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private utilService: UtilService
-  ) { }
+  ) {}
 
   username: string = '';
   password: string = '';
@@ -45,14 +43,14 @@ export class LoginComponent {
       return true;
     }
   }
-  hasQueryParams() { }
+  hasQueryParams() {}
   iniciarSesion(): void {
-    console.log("Iniciando sesión...");
+    console.log('Iniciando sesión...');
     if (this.areCorrectFields()) {
-      console.log("Entra1...");
+      console.log('Entra1...');
       this.authService.login(this.username, this.password).subscribe(
         (data: any) => {
-          console.log("Respuesta del servidor:", data); // Agregar esta línea para imprimir la respuesta del servidor
+          console.log('Respuesta del servidor:', data); // Agregar esta línea para imprimir la respuesta del servidor
           const rol = localStorage.getItem('role');
           if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
             this.router.navigate(['/reset-password']);
@@ -61,7 +59,7 @@ export class LoginComponent {
           }
         },
         (error: any) => {
-          console.error("Error en la suscripción:", error);
+          console.error('Error en la suscripción:', error);
           let code: number | undefined = error.status
             ? Math.round(error.status / 100) * 100
             : undefined;

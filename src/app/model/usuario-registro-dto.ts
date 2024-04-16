@@ -4,6 +4,6 @@ export class UsuarioRegistroDto {
     public surname: string,
     public cedula: number,
     public email: string,
-    public rol: string[]
+    public rol: string
   ) {}
 }
