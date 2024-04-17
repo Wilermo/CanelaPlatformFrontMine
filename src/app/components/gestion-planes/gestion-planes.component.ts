@@ -20,7 +20,7 @@ export class GestionPlanesComponent implements OnInit {
     this.infoPlanesService.getPlanes().subscribe(
       (data) => {
         console.log(data);
-        this.planes = data; 
+        this.planes = data;
       },
       (error) => {
         console.error('Ocurrió un error al obtener los planes:', error);
@@ -32,7 +32,11 @@ export class GestionPlanesComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  usuarios() {
+  pantallaUsuarios() {
     this.router.navigate(['/canela/usuarios']);
+  }
+
+  pantallaPermisos() {
+    this.router.navigate(['/canela/permisos']);
   }
 }

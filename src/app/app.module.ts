@@ -12,6 +12,7 @@ import { PermisosUsuarioComponent } from './components/permisos-usuario/permisos
 import { GestionPlanesComponent } from './components/gestion-planes/gestion-planes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,3 +28,4 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

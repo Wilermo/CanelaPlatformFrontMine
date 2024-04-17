@@ -16,6 +16,8 @@ export class PermisosUsuarioService {
   constructor(private http: HttpClient) {}
 
   findAllUsers(): Observable<UsuarioPermisoDto[]> {
-    return this.http.get<UsuarioPermisoDto[]>(`URL_DEL_BACKEND/usuario/list`);
+    return this.http.get<UsuarioPermisoDto[]>(
+      'http://localhost:8080/canelaUser/getUsers'
+    );
   }
 }
