@@ -50,12 +50,12 @@ export class LoginComponent {
       console.log("Entra1...");
       this.authService.login(this.username, this.password).subscribe(
         (data: any) => {
-          console.log("Respuesta del servidor:", data); // Agregar esta línea para imprimir la respuesta del servidor
+          console.log("Respuesta del servidor:", data); 
           const rol = localStorage.getItem('role');
           if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
             this.router.navigate(['/reset-password']);
-          } else if (rol === 'ADMIN') {
-            this.router.navigate(['/reset-password']);
+          }  else if (rol !== 'ADMIN_CANELA, default-roles-talentsoft') {
+            this.router.navigate(['/modules']);
           }
         },
         (error: any) => {
