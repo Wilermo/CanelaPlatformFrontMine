@@ -53,9 +53,9 @@ export class LoginComponent {
           console.log('Respuesta del servidor:', data); // Agregar esta línea para imprimir la respuesta del servidor
           const rol = localStorage.getItem('role');
           if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
-            this.router.navigate(['/permisos']);
+            this.router.navigate(['/canela/permisos']);
           } else if (rol === 'ADMIN') {
-            this.router.navigate(['/permisos']);
+            this.router.navigate(['/canela/permisos']);
           }
         },
         (error: any) => {

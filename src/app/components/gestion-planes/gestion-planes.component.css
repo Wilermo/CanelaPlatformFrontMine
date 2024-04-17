@@ -299,8 +299,15 @@ body {
 }
 
 
+.button-container{
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
   .btn-plan{
     background-color: #963e6c;
     color: #ffffff; 
+    width: 10%;
   }

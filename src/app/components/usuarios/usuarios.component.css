@@ -85,6 +85,13 @@
   justify-content: flex-start;
 }
 
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #EDF2F7; /* Color de fondo para el resto de la pantalla */
+  height: 100%;
+  width: 100%;
+}
+
 .simple_container{
   display: flex;
   width: 100%;
@@ -113,7 +120,8 @@
   height: 100%;
   border: 1px solid #ccc; 
   background-color: #52223b; 
-  display: flex; justify-content: center; 
+  display: flex; 
+  justify-content: center; 
   align-items: center;
 }
 

@@ -198,6 +198,8 @@ input:checked + .slider:before {
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: #EDF2F7; /* Color de fondo para el resto de la pantalla */
+  height: 100%;
+  width: 100%;
 }
 
 /* Estilos para la barra de navegación lateral */
