@@ -8,6 +8,104 @@
   padding: 10px; /* Espaciado de los elementos del menú */
 }
 
+
+.nav{
+  width: 100%;
+  height: 100%;
+}
+
+.container-padre{
+  width: 100%; /* Asegura que el contenedor sea de ancho completo */
+/* Elimina el padding interno */
+  margin: auto; 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+
+
+}
+.container-padre > .row > .col {
+    width: 100%;
+}
+
+.contInfo{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #EDF2F7;
+}
+
+.col1 {
+  display: flex;
+  flex-wrap: wrap;
+  height:100%; 
+  width: 15%; 
+  background-color: #f8f9fa; /* Color de fondo del menú */
+
+}
+
+
+.col2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-size: cover; 
+  background-position: center;
+  height: 100%; 
+  width: 85%;   
+
+  background-color: #f8f9fa; /* Color de fondo del menú */
+
+}
+
+.container-fluid{
+  margin-top: 10px;
+}
+
+.contenido{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  /*width: 1191.005px;
+  height:112px;*/
+  height: 100%;
+  border: 1px solid #ccc;
+    flex-direction: row;
+  justify-content: flex-start;
+}
+
+.simple_container{
+  display: flex;
+  width: 100%;
+}
+
+.cont1{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.cont2{
+  display: flex;
+  width: auto;
+  border-radius: 10px;
+  margin-top:20px;
+}
+
+.contTitulo{
+  /*width: 1191.005px; 
+  height: 210px;*/ 
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc; 
+  background-color: #52223b; 
+  display: flex; justify-content: center; 
+  align-items: center;
+}
 /* Estilos para los contenedores adicionales */
 .col-11 {
   border: 1px solid #dee2e6; /* Borde para visualización */
@@ -18,13 +116,10 @@
 .col-3{
   background-color: #EDF2F7; /* Color de fondo del menú */
   border-right: 1px solid #dee2e6; /* Borde derecho */
-  padding-top: 20px; /* Espaciado superior */
-}
-
-.container-fluid{
-  display: flex;
 
 }
+
+
 
 /* Estilos para el interruptor personalizado */
 .switch {

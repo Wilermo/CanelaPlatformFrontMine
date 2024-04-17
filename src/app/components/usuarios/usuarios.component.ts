@@ -21,6 +21,16 @@ export class UsuariosComponent {
   nuevoUsuario: UsuarioRegistroDto | undefined;
   nuevoUsuarioAuth: User = new User();
 
+  ngOnInit(): void {}
+
+  pantallaPlanes() {
+    this.router.navigate(['/canela/planes']);
+  }
+
+  pantallaPermisos() {
+    this.router.navigate(['/canela/permisos']);
+  }
+  /*
   guardar() {
     let primerNombre = (<HTMLInputElement>(
       document.getElementById('entradaprimerNombre')
@@ -61,7 +71,7 @@ export class UsuariosComponent {
     } else {
     }
   }
-
+*/
   enviarDatos(): void {
     const token = localStorage.getItem('token');
     if (token) {
