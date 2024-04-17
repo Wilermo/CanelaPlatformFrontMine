@@ -8,14 +8,14 @@ import { UtilService } from '../../../app/services/util.services';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   constructor(
     private authService: AuthService,
     private router: Router,
     private utilService: UtilService
-  ) { }
+  ) {}
 
   username: string = '';
   password: string = '';
@@ -43,11 +43,11 @@ export class LoginComponent {
       return true;
     }
   }
-  hasQueryParams() { }
+  hasQueryParams() {}
   iniciarSesion(): void {
-    console.log("Iniciando sesión...");
+    console.log('Iniciando sesión...');
     if (this.areCorrectFields()) {
-      console.log("Entra1...");
+      console.log('Entra1...');
       this.authService.login(this.username, this.password).subscribe(
         (data: any) => {
           console.log("Respuesta del servidor:", data); 
@@ -59,7 +59,7 @@ export class LoginComponent {
           }
         },
         (error: any) => {
-          console.error("Error en la suscripción:", error);
+          console.error('Error en la suscripción:', error);
           let code: number | undefined = error.status
             ? Math.round(error.status / 100) * 100
             : undefined;
@@ -79,4 +79,7 @@ export class LoginComponent {
     }
   }
 
+  login() {
+    this.router.navigate(['/canela/permisos']);
+  }
 }
