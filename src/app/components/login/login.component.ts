@@ -78,8 +78,4 @@ export class LoginComponent {
       );
     }
   }
-
-  login() {
-    this.router.navigate(['/canela/permisos']);
-  }
 }
