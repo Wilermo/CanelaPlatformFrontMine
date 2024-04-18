@@ -17,7 +17,7 @@ export class PermisosUsuarioService {
 
   findAllUsers(): Observable<UsuarioPermisoDto[]> {
     return this.http.get<UsuarioPermisoDto[]>(
-      'https://rootcanelamicroservice-production.up.railway.app/canelaUser/getUsers'
+      'https://rootcanelamicroservice-production.up.railway.app/canela/getUsers'
     );
   }
 }
