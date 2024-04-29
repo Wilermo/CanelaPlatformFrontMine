@@ -6,6 +6,7 @@ export class PlanesDto {
     public description: string | undefined,
     public duration: string | undefined,
     public maxNumWorker: number | undefined,
-    public bonuses: number | undefined
+    public bonuses: number | undefined,
+    public status: boolean | undefined
   ) {}
 }
