@@ -51,4 +51,8 @@ export class SlidebarComponent implements OnInit {
   pantallaPerfil() {
     this.router.navigate(['canela/perfil/view/:id']);
   }
+
+  logout(): void {
+    localStorage.clear();
+  }
 }

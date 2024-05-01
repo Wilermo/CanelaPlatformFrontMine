@@ -8,6 +8,7 @@ export class PerfilDto {
     public numberPhone: number,
     public emergencycontactname: string,
     public emergencyContact: number,
-    public password: string
+    public password: string,
+    public status: string
   ) {}
 }

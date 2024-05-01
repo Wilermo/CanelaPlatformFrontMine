@@ -32,10 +32,10 @@ const routes: Routes = [
       { path: 'canela/perfil/edit/:id', component: PerfilEditarComponent },
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
       { path: 'canela/marketing', component: MarketingComponent },
-      { path: 'canela/plan-editar', component: PlanEditarComponent },
-      { path: 'canela/plan-crear', component: PlanCrearComponent },
-      { path: 'canela/crear-empresa', component: CrearEmpresaComponent },
-      { path: 'canela/editar-empresa', component: EditarEmpresaComponent },
+      { path: 'canela/plan/edit/:id', component: PlanEditarComponent },
+      { path: 'canela/plan/add', component: PlanCrearComponent },
+      { path: 'canela/empresa/add', component: CrearEmpresaComponent },
+      { path: 'canela/empresa/edit/:id', component: EditarEmpresaComponent },
 
       // Ruta hija
       // Puedes añadir más rutas hijas que requieran Navbar aquí
