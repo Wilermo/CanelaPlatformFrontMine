@@ -31,43 +31,54 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="contTitulo" >
-                            
-                        <div class="container-fluid m-3 tabla-creacion" style="width: 1000px; height: 400px; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center;">
-                            <h2>Creación usuario</h2>
-                            <div class="container-informacion">
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Nombre: </b> {{perfil.name}}</p>
->
-                                </div>
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Cedula: </b> {{perfil.identificacion}}</p>
-                                </div>
-                            
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Correo: </b> {{perfil.email}}</p>
-                                </div>
-
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Dirección: </b> {{perfil.address}}</p>
-
-                                </div>
-
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Contacto: </b> {{perfil.emergencycontactname}}</p>
-                                </div>
-                                <div class="mb-3">
-                                    <p id="nombre"><b class="subtitulo">Contraseña: </b> {{perfil.password}}</p>
-
-                                </div>
-                                
-                            </div>
-
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-plan" type="button" (click)="editarInformacion()">EditarUsuario</button>
-                                </div>    
+                        <div class="container-fluid m-3" style="width: 70%; height: 80%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
+                            <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Mi perfil</h1>
                         </div>
+                    </div>
+
+                    <div class="contInfo" >
+                            
+                        <div class="container-fluid " style="width: 70%; height: 50%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 15px;display: flex; align-items: center;">
+
+                            <div class="row">
+                                <div class="col-md-6 info1" >
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nombre: </b> {{perfil?.name}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Usuario: </b> {{perfil?.username}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Correo: </b> {{perfil?.email}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Cedula: </b> {{perfil?.identificacion}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 info2">
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Dirección: </b> {{perfil?.address}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Telefono: </b> {{perfil?.numberPhone}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nombre contacto: </b> {{perfil?.emergencycontactname}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Teléfono contacto: </b> {{perfil?.emergencyContact}}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                                
+ 
+                        </div>
+
+                        <button class="btn btn-plan" type="button" (click)="editarInformacion()">Editar</button>
+
                     </div>
                 </div>
             </div>        

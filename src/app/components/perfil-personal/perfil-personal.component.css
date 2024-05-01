@@ -21,12 +21,25 @@
   .contInfo{
     display: flex;
     width: 100%;
-    height: 60%;
+    height: 100%;
     border: 1px solid #ccc;
     background-color: #EDF2F7;
     flex-direction:  column;
   }
+
   
+  
+  .perfil{
+    margin-bottom: 10px !important;
+    margin-left: 20px!important;
+  }
+  .info1,
+  .info2 {
+      float: left;
+      width: 55vh;
+      margin-left: 20px; /* Esto hace que cada columna ocupe el 50% del ancho del contenedor */
+      box-sizing: border-box; /* Esto asegura que el padding y el borde no afecten el ancho de las columnas */
+  }
   .col1 {
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +73,8 @@
     padding: 0rem !important;
     /*width: 1191.005px;
     height:112px;*/
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     border: 1px solid #ccc;
     flex-direction: row;
     justify-content: flex-start;
@@ -70,7 +84,7 @@
   .simple_container{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 15%;
   }
   
   .cont1{
@@ -93,7 +107,7 @@
     /*width: 1191.005px; 
     height: 210px;*/ 
     width: 100%;
-    height: 25%;
+    height: 20%;
     border: 1px solid #ccc; 
     background-color: #52223b; 
     display: flex; justify-content: center; 
@@ -293,7 +307,11 @@
   }
   
   .btn-plan{
+ 
       background-color: #963e6c;
       color: #ffffff; 
       width: 10%;
+      margin-left:75vh;
+      margin-top: 25px;
+
   }

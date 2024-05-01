@@ -16,4 +16,16 @@ export class PerfilService {
   };
 
   constructor(private http: HttpClient) {}
+
+  findById(id: number) {
+    return this.http.get<PerfilDto>(`http://localhost:8080/users/{id}`);
+  }
+
+  modificarPerfil(perfil: PerfilDto): Observable<PerfilDto> {
+    return this.http.put<PerfilDto>(
+      `http://localhost:8080/bus/edit`,
+      perfil,
+      this.httpOptions
+    );
+  }
 }

@@ -47,4 +47,8 @@ export class SlidebarComponent implements OnInit {
   pantallaSuscripciones() {
     this.router.navigate(['/canela/suscripciones']);
   }
+
+  pantallaPerfil() {
+    this.router.navigate(['canela/perfil/view/:id']);
+  }
 }
