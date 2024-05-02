@@ -7,7 +7,11 @@ import { PlanesDto } from '../model/planes-dto';
   providedIn: 'root',
 })
 export class InfoPlanesService {
+<<<<<<< HEAD
   private apiUrl = 'https://canelaplanbackend-production.up.railway.app/api/planes';
+=======
+  private apiUrl = 'http://localhost:8080/plans';
+>>>>>>> 09bcb9504fe5f4e9f07193696d2cfbf3b44bbdd3
 
   private httpOptions = {
     headers: new HttpHeaders({
