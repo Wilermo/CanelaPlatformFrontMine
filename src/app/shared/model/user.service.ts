@@ -12,7 +12,7 @@ export class UserService {
 
   // Método para crear un usuario con un token Bearer
   createUser(user: User, role: string, token: string): Observable<User> {
-    const url = `${environment.authURL}/${role}/canela`;
+    const url = `${environment.authURL}/canela/${role}`;
 
     // Crear los headers necesarios para la autorización
     const headers = new HttpHeaders({
