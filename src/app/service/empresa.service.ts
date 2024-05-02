@@ -33,4 +33,8 @@ export class EmpresaService {
   findById(id: number) {
     return this.http.get<EmpresaDto>(`http://localhost:8080/companies/{id}`);
   }
+
+  getEmpresas(): Observable<EmpresaDto[]> {
+    return this.http.get<EmpresaDto[]>(this.apiUrl, this.httpOptions);
+  }
 }
