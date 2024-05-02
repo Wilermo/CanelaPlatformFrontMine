@@ -1,9 +1,9 @@
 export class PlanesDto {
   constructor(
-    public namePlan: string,
-    public description: string,
-    public duration: string,
-    public maxNumWorker: number,
-    public bonuses: number
+    public name: string | undefined,
+    public description: string | undefined,
+    public duration: number | undefined,
+    public maxNumWorker: number | undefined,
+    public price: number | undefined
   ) {}
 }

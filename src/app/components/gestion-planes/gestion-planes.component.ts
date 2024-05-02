@@ -28,15 +28,13 @@ export class GestionPlanesComponent implements OnInit {
     );
   }
 
-  login() {
-    this.router.navigate(['/']);
+  editarPlan(Plan: any) {
+    this.router.navigate(['canela/plan/edit/:id']);
   }
 
-  pantallaUsuarios() {
-    this.router.navigate(['/canela/usuarios']);
-  }
+  eliminarPlan(suscripcion: any) {}
 
-  pantallaPermisos() {
-    this.router.navigate(['/canela/permisos']);
+  nuevoPlan() {
+    this.router.navigate(['canela/plan/add']);
   }
 }
