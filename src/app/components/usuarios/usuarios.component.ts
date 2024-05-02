@@ -76,30 +76,18 @@ export class UsuariosComponent {
     const token = localStorage.getItem('token');
     if (token) {
       console.log('Datos que se envían:', this.nuevoUsuarioAuth);
-<<<<<<< HEAD
+
       this.userService
         .createUser(this.nuevoUsuarioAuth, this.nuevoUsuarioAuth.role, token)
         .subscribe({
           next: (data) => {
             console.log('Respuesta recibida:', data);
-            this.router.navigate(['/users']);
+            this.router.navigate(['/canela/permisos']);
           },
           error: (err) => {
             console.error('Error al enviar datos:', err);
           },
         });
-=======
-      this.userService.createUser(this.nuevoUsuarioAuth, this.nuevoUsuarioAuth.role, token).subscribe({
-        next: (data) => {
-          console.log('Respuesta recibida:', data);
-          this.router.navigate(['/canela/permisos']);
-        },
-        error: (err) => {
-          console.error('Error al enviar datos:', err);
-        }
-      });
-
->>>>>>> fc898a5e7162bca85d36606dc62e07d28e1d8115
     } else {
       console.error('No se encontró el token de autenticación');
     }
