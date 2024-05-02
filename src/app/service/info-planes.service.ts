@@ -7,7 +7,7 @@ import { PlanesDto } from '../model/planes-dto';
   providedIn: 'root',
 })
 export class InfoPlanesService {
-  private apiUrl = 'http://localhost:8080/api/planes';
+  private apiUrl = 'http://localhost:8080/plans';
 
   private httpOptions = {
     headers: new HttpHeaders({
